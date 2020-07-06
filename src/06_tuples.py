@@ -2,7 +2,7 @@
 Python tuples are sort of like lists, except they're immutable and
 are usually used to hold heterogenous data, as opposed to lists
 which are typically used to hold homogenous data. Tuples use
-parens instead of square brackets.
+parentheses instead of square brackets.
 
 More specifically, tuples are faster than lists. If you're looking
 to just define a constant set of values and that set of values
@@ -37,8 +37,12 @@ print("Distance is: {:.2f}".format(dist(a, b)))
 # YOUR CODE HERE
 
 t = (1, 2, 5, 7, 99)
+def print_tuple(x):
+        for i in x:
+            print(i)
+
 print_tuple(t)  # Prints 1 2 5 7 99, one per line
 
 # Declare a tuple of 1 element then print it
-u = (1)  # What needs to be added to make this work?
+u = (1,)  # What needs to be added to make this work?
 print_tuple(u)

@@ -11,12 +11,13 @@ import sys
 # Print out the command line arguments in sys.argv, one per line:
 print(sys.argv)
 
-arguments = len(sys.argv) - 1
+args = len(sys.argv) - 1
 
 position = 1
-if (arguments >= position):
-    print ("Parameter %i: %s" % (position + sys.argv[position]))
-    position = position + 1
+def comm_args(args, position):
+    if (args >= position):
+        print ("Parameter %i: %s" % (position + sys.argv[position]))
+        position = position + 1
 
 # Print out the OS platform you're using:
 import os
