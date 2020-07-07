@@ -9,15 +9,7 @@ import sys
 # See docs for the sys module: https://docs.python.org/3.7/library/sys.html
 
 # Print out the command line arguments in sys.argv, one per line:
-print(sys.argv)
-
-args = len(sys.argv) - 1
-
-position = 1
-def comm_args(args, position):
-    if (args >= position):
-        print ("Parameter %i: %s" % (position + sys.argv[position]))
-        position = position + 1
+y = [print(i) for i in sys.argv]
 
 # Print out the OS platform you're using:
 import os
