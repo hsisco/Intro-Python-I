@@ -6,11 +6,19 @@ the list should be populated.
 
 Take a look at https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
 for more info regarding list comprehensions.
+
+For Loop:
+[<map expression> for <name> in <sequence expression> if <filter expression>]
 """
 
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
 y = [i+1 for i in range(5)]
+# y = []
+#   for i in range(1,6)]   <- same thing, but the <map expression> 
+#                               is implied as only the i within the [], 
+#                               then you have to change it explicitly 
+#                               within the 'for loop'
 print(y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
