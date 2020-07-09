@@ -62,6 +62,44 @@ class Store:
         self.catagories =  catagories
     
     def __str__(self):
-        output = f"{self.name}/n"
+        output = f"{self.name}\n"
         for i, c in enumerate(self.catagories):
-            output += " " + str(i+1)
+            output += " " + str(i+1) + ". " + c.name + "\n"
+
+    output += " " + str(len(self.catagories) + 1) + ". Exit"
+    return output
+
+my_store = Store("The Dugout", [Category("Running"), Category()])
+
+"""
+Products
+"""
+class Product:
+    def __init__(self, name, price, description, brand, sku, on_sale=False):
+        self.name = name
+        self.price = price
+        self.description = description
+        self.brand = brand
+        self.sku = sku
+        self.on_sale = on_sale
+
+    def __str__(self):
+        return self.name + "\t$" + str(self.price)
+
+class Clothing(Product):
+    def __init__(self, color, size, name, price, description, brand, sku):
+        super().__init__(name, price, description, brand, sku, on_sale=True): # putting on_sale here makes it impossible for a user to make on_sale be False
+        self.color = color
+        self.size = size
+    
+    def __str__(self):
+        super().__str__() + " comes in " + self.color + ", " + self.size
+        # makes Product str available and adds the new Clothing str
+
+class Food(Product):
+    pass
+
+# Product reader function
+products = []
+
+def product_reader(products=[])
