@@ -47,9 +47,9 @@ print(args)
 #     print("Please input numerical month and year")
 
 current = datetime.now()
-c = calendar.TextCalendar()
+# c = calendar.TextCalendar()
 
 def curr_calendar(month=current.month, year=current.year):
-    print(c.prmonth(month, year))
+    print(calendar.prmonth(month, year))
 
 curr_calendar(*args)
