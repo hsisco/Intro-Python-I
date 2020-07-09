@@ -8,8 +8,9 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Print all the contents of the file, then close the file
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
-with open("src/foo.txt") as foo:
-    foo.read()
+with open("foo.txt") as foo:
+    x = foo.read()
+    print(x)
 foo.close()
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
@@ -17,15 +18,16 @@ foo.close()
 # then close the file. Open up "bar.txt" and inspect it to make
 # sure that it contains what you expect it to contain
 
-with open("src/bar.txt","w") as bar:
-    bar.write('But if you do, sir, and for you, I serve as good a man as you!/n')
-    bar.write('No better?/n')
-    bar.write('Uh... uh.../n')
-    bar.write('Here comes our kinsman, say better!/n')
-    bar.write('Yes, sir, better!/n')
-    bar.write('You lie!/n')
+with open("bar.txt","w") as bar:
+    bar.write('But if you do, sir, and for you, I serve as good a man as you!\n')
+    bar.write('No better?\n')
+    bar.write('Uh... uh...\n')
+    bar.write('Here comes our kinsman, say better!\n')
+    bar.write('Yes, sir, better!\n')
+    bar.write('You lie!\n')
 bar.close()
 
-with open("src/bar.txt") as bar:
-    bar.read()
+with open("bar.txt") as bar:
+    y = bar.read()
+    print(y)
 bar.close()

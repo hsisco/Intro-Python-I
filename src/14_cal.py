@@ -31,25 +31,30 @@ import sys
 import calendar
 from datetime import datetime
 
-args = sys.argv[:1]
+args = sys.argv
+system = len(args)
 print(args)
 
-# if system == 1:
-#     m = datetime.now().month
-#     y = datetime.now().year
-#     print(calendar.month(m, y))
-# elif system == 2:
-#     m = datetime.now().month
-#     print(calendar.month(m, l[2]))
-# elif system == 3:
-#     print(calendar.month(l[1], l[2]))
-# else:
-#     print("Please input numerical month and year")
+if system == 1:
+    m = datetime.now().month
+    y = datetime.now().year
+    # print(calendar.month(m, y))
+elif system == 2:
+    m = args[1]
+    y = datetime.now().year
+    # print(calendar.month(m, l[2]))
+elif system == 3:
+    m = args[1]
+    y = args[2]
+else:
+    print("Please input numerical month and year")
 
-current = datetime.now()
+print(calendar.month(int(y), int(m)))
+
+# current = datetime.now()
 # c = calendar.TextCalendar()
 
-def curr_calendar(month=current.month, year=current.year):
-    print(calendar.prmonth(month, year))
+# def curr_calendar(month=current.month, year=current.year):
+#     print(calendar.prmonth(month, year))
 
-curr_calendar(*args)
+# curr_calendar(*args)
